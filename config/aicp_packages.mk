@@ -91,7 +91,9 @@ endif
 include vendor/aicp/config/aosp_audio.mk
 
 # Google sounds
+ifneq ($(WITH_GMS),true)
 include vendor/aicp/google/GoogleAudio.mk
+endif
 
 # TWRP
 ifeq ($(BUILD_TWRP),true)
